@@ -1,0 +1,13 @@
+<h1 style="display: flex;align-items: center;justify-content: center;margin-top: 300px;margin-left: -50px;">General </h1>
+<div class="container">
+  <label for="input" class="label">Send commands to soldiers: </label>
+  <input type="text" placeholder="Enter commands" id="input"  [(ngModel)] = "command">
+  <input type="button" value="send" class="btn" (click)="sendData()">
+</div>
+<div>
+  <h4 style="display: flex;align-items: center;justify-content: center;margin-left: -20%;">View replies here : {{_interactionService.reply}}</h4>
+</div>
+
+<br>
+
+<app-child [order]="order"></app-child>
